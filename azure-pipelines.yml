@@ -11,9 +11,8 @@ steps:
 
 - script: |
    docker build --rm -f Dockerfile -t simplenodeproj:latest .
-   docker image ls -a
-   docker tag simplenodeproj:latest acrtejit.azurecr.io/$(Build.Repository.ID):latest
-   docker image ls -a
-   docker login -u acrtejit -p BUMI1sp0A88EJQU5gXX7hzXx6S+JycW4 acrtejit
-   docker push acrtejit.azurecr.io/simplenodeproj:latest 
-   displayName: 'Docker build and push'
+   docker images
+   docker tag simplenodeproj:latest acrtejit.azurecr.io/simplenodeproj:latest
+   docker images
+   docker login -u acrtejit -p BUMI1sp0A88EJQU5gXX7hzXx6S+JycW4 acrtejit.azurecr.io
+   docker push acrtejit.azurecr.io/simplenodeproj:latest
