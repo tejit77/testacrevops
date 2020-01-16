@@ -1,2 +1,2 @@
 # Test-Devops
-Build docker image and push it to the ACR
+Build docker images and push it to the ACR
