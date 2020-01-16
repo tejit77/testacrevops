@@ -17,4 +17,3 @@ steps:
    docker image ls -a
    docker login -u acrtejit -p BUMI1sp0A88EJQU5gXX7hzXx6S+JycW4 acrtejit.azurecr.io
    docker push acrtejit.azurecr.io /simplenodeproj:latest
-   displayName: 'Docker build and Push'
