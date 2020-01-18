@@ -16,5 +16,7 @@ steps:
    docker images
    docker login -u acrtejit -p BUMI1sp0A88EJQU5gXX7hzXx6S+JycW4 acrtejit.azurecr.io
    docker push acrtejit.azurecr.io/simplenodeproj:latest
+   az login --service-principal --username 6074efd5-461c-4e66-8151-d668bb04085f --password FuT.7A:55mEg_x-tL6I:1hMQ0-_X?7xP --tenant 415a8c7e-8647-4b46-b291-9cd6c3cde41d
+   az account set -s "Shreyas – Visual Studio Enterprise – MPN"
    az aks get-credentials --resource-group aks-aad-rg-2 --name myAKSCluster
    kubectl apply -f acr-nginx.yaml
