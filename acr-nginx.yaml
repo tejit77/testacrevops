@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: acrtejit.azurecr.io/nginx-app1:latest
+        image: acrtejit.azurecr.io/simplenodeproj:latest
         ports:
         - containerPort: 80
