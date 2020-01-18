@@ -1,0 +1,20 @@
+pool:
+  name: Hosted Ubuntu 1604
+  demands: npm
+
+steps:
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    workingDir: 
+    verbose: false
+
+- script: |
+   docker build --rm -f Dockerfile -t simplenodeproj:latest .
+   docker images
+   docker tag simplenodeproj:latest acrtejit.azurecr.io/simplenodeproj:latest
+   docker images
+   docker login -u acrtejit -p BUMI1sp0A88EJQU5gXX7hzXx6S+JycW4 acrtejit.azurecr.io
+   docker push acrtejit.azurecr.io/simplenodeproj:latest
+   az aks get-credentials --resource-group aks-aad-rg-2 --name myAKSCluster
+   kubectl apply -f acr-nginx.yaml
