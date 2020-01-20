@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:nginx
 LABEL author="Sahil Malik"
 COPY index.html /usr/share/nginx/html
 EXPOSE 80 443
